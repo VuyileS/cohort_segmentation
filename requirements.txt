@@ -1,0 +1,8 @@
+pandas
+matplotlib
+seaborn
+scikit-learn
+ipython
+snowflake-connector-python
+load-dotenv
+streamlit
