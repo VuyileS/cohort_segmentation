@@ -6,3 +6,4 @@ ipython
 snowflake-connector-python
 load-dotenv
 streamlit
+openpyxl
