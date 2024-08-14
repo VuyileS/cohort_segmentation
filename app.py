@@ -22,7 +22,7 @@ st.title("Kena RFM Segmentation and Clustering")
 
 # File upload
 uploaded_file = st.file_uploader("Upload your CSV or Excel file", type=["csv", "xlsx"])
-st.markdown("## 🛠️ Preprocessing")
+
 if uploaded_file:
     if uploaded_file.name.endswith('.csv'):
         df = pd.read_csv(uploaded_file)
@@ -45,7 +45,7 @@ if uploaded_file:
         - **Monetary Value**: This metric represents the total amount of money invoiced to the patient. It is calculated by summing up the monetary value of all invoices generated against each patient.
         
     """)
-
+    st.markdown("## 🛠️ Preprocessing")
     # Convert date column to datetime format
     df['Date'] = pd.to_datetime(df['CREATED_AT'])
     df['Rank'] = df.sort_values(['PATIENT_ID', 'Date']).groupby(['PATIENT_ID'])['Date'].rank(method='min').astype(int)
